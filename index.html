@@ -13,15 +13,16 @@
     <h1>Cadastro de Pessoas</h1>
     <form action="">
         <label for="nome" class="formulario">Nome</label>
-        <input type="text" id="nome" class="input-padrao" required placeholder="Digite o seu nome"
+        <input type="text" id="nome" class="input-padrao" placeholder="Digite o seu nome"
             oninvalid="this.setCustomValidity('Campo obrigatório!')">
 
         <label for="" class="formulario">Data de nascimento</label>
-        <input type="date" id="data-nascimento" class="input-padrao" required
+        <input type="date" id="data-nascimento" class="input-padrao"
             oninvalid="this.setCustomValidity('Campo obrigatório!')">
 
-        <input type="submit" value="Enviar" class="enviar">
+        <input type="submit" value="Enviar" class="enviar" id="enviar">
     </form>
+    <script src="main.js"></script>
 </body>
 
 </html>
