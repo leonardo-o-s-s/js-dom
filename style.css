@@ -10,6 +10,14 @@ h1 {
     display: block;
 }
 
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: blue;
+}
+
 .input-padrao {
     display: block;
     border: 2px solid;
