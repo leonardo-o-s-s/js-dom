@@ -1,20 +1,28 @@
-/*
-Com essa estrutura base criada, você precisará vincular uma função ao evento de submissão do formulário.
-A função vinculada deverá pegar o valor informado nos campos nome
-e data de nascimento e imprimi-los no console.
-*/
-// const botao = document.getElementById("enviar")
-// const valores = []
+const botao = document.getElementById("enviar")
+const form = document.getElementById("form")
+const itens = JSON.parse(localStorage.getItem("itens")) || []
 
-// botao.addEventListener("click", (evento) => {
-//     const nome = document.querySelector("#nome").value
-//     const dataNascimento = document.querySelector("#data-nascimento").value
-//     evento.preventDefault()
-//     console.log(nome)
-//     console.log(dataNascimento)
-// })
+botao.addEventListener("click", (evento) => {
+    const nome = document.querySelector("#nome").value
+    const dataNascimento = document.querySelector("#data-nascimento").value
+    // evento.preventDefault()
+    console.log(nome)
+    console.log(dataNascimento)
+})
 
 
-// function mensagem(pessoa, nascimento) {
-//     alert(`Olá ${pessoa}, sua data de nascimento é: ${nascimento}`)
-// }
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    const nomeForm = event.target.elements["nome"].value
+    const dataForm = event.target.elements["data-nascimento"].value
+    const itensStorage = {
+        "nome": nomeForm,
+        "data-nascimento": dataForm
+    }
+    const existeLocalStorage = itens.find(elemento => elemento.nome === elemento.value)
+    console.log(event)
+    console.log(nomeForm)
+    console.log(dataForm)
+
+    localStorage.setItem("itens", JSON.stringify(itensStorage))
+})
