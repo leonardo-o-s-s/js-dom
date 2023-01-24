@@ -19,11 +19,6 @@ form.addEventListener("submit", (event) => {
         "nome": nomeForm.value,
         "data-nascimento": dataForm.value
     }
-    // const existeLocalStorage = itens.find(elemento => elemento.nome === elemento.value)
-
-    // if (existeLocalStorage){
-
-    // }
 
     console.log(event)
     console.log(nomeForm)
