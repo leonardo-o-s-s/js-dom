@@ -13,13 +13,18 @@ botao.addEventListener("click", (evento) => {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    const nomeForm = event.target.elements["nome"].value
-    const dataForm = event.target.elements["data-nascimento"].value
+    const nomeForm = event.target.elements["nome"]
+    const dataForm = event.target.elements["data-nascimento"]
     const itensStorage = {
-        "nome": nomeForm,
-        "data-nascimento": dataForm
+        "nome": nomeForm.value,
+        "data-nascimento": dataForm.value
     }
-    const existeLocalStorage = itens.find(elemento => elemento.nome === elemento.value)
+    // const existeLocalStorage = itens.find(elemento => elemento.nome === elemento.value)
+
+    // if (existeLocalStorage){
+
+    // }
+
     console.log(event)
     console.log(nomeForm)
     console.log(dataForm)
